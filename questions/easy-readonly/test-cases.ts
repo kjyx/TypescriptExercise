@@ -10,4 +10,4 @@ interface Todo1 {
   meta: {
     author: string
   }
-}
+} 
