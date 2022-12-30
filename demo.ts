@@ -767,5 +767,25 @@
 //     kind: 'cc'
 // };
 
+// let statusCode = {
+//     200: "操作成功",
+//     404: "内容找不到",
+//     500: "操作失败",
+//     10001: "登录失效",
+// };
+
+// type status = keyof typeof statusCode;
+
+// let status1:status = 200
+
+// let ccc = statusCode[status1]
+
+type MySplit<T extends string, U extends unknown[] = []> = T extends `${infer F}${infer last}` ? MySplit<last, [...U, F]> : U;
+
+type str = MySplit<"12345">;
 
 
+
+
+type Indexof<T extends any[], U, C extends number[] = []> = T extends [infer F, ...infer Rest] ? (F extends U ? C["length"] : Indexof<Rest, U, [...C, 1]>) : -1;
+type kkk = Indexof<[1, 2, 3, 4, 5], 4>;
