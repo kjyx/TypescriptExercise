@@ -1,4 +1,3 @@
-"use strict";
 // function map<T, U>(f: (t: T) => U, ts: T[]): U[];
 // let sns = map<number, string>((n) => n.toString(), [1, 2, 3]);
 // declare function run<T>(thunk: (t: T) => void): T;
@@ -483,9 +482,100 @@
 // });
 // let arr: [number, string, boolean] = [10, "10", true];
 // let [a, b, c] = arr
-function Person(a) {
-    return function (b) {
-        console.log(a + b);
-    };
-}
-let a = Person(10)(20);
+// type ccc = `http://${string}`
+// interface Person {
+//     name: string;
+//     age: number;
+//     sex: string;
+// }
+// // type kk = Record<keyof Person, string>;
+// type KK = Pick<Person, "name">;
+// type FnWidthProp = {
+//     fn(a: number, b: number): number;
+//     prop: string;
+// };
+// let F: FnWidthProp = {
+//     fn: (x, y) => {
+//         return x + y;
+//     },
+//     prop: "hi",
+// };
+// F.fn(10, 20);
+// type A = string;
+// type B = A;
+// let x: A = "hello";
+// let y: B = x;
+// interface Person extends Array<string> {
+//     username: string;
+// }
+// type A1 = { name: string };
+// type B1 = { age: number };
+// type C1 = A1 | B1;
+// let C: C1 = {
+//     age: 100
+// };
+// const F1 = (a: null | { name: string }) => {
+//     if (a == null) {
+//         console.log(111);
+//     } else {
+//         console.log(a.name);
+//     }
+// };
+// type Rect = {
+//     height: number;
+//     width: number;
+// };
+// type Circle = {
+//     center: [number, number];
+//     redius: number;
+// };
+// const F1 = (a: Rect | Circle) => {
+//     if (isRect(a)) {
+//         a;
+//     }
+// };
+// function isRect(x: Rect | Circle): x is Rect {
+//     return "height" in x && "width" in x;
+// }
+// const value: unknown = "ccc";
+// let key: string = value as string;
+// interface X {
+//     a: number;
+// }
+// interface Y {
+//     a: number;
+//     b: number;
+// }
+// let K: X = {
+//     a: 999,
+// };
+// let CC: Y = {
+//     a: 100,
+//     b: 200,
+// };
+// type Person = {
+//     name: string;
+//     age: number;
+//     kind: string;
+// };
+// type User = Person & {
+//     sex: string;
+//     genter: string;
+//     kind: number;
+// };
+// let user: User = {
+//     name: "ccc",
+//     age: 100,
+//     sex: "男",
+//     genter: "ccc",
+//     kind: 'cc'
+// };
+var statusCode = {
+    200: "操作成功",
+    404: "内容找不到",
+    500: "操作失败",
+    10001: "登录失效"
+};
+var status1 = 200;
+var ccc = statusCode[status1];
+console.log(ccc);
