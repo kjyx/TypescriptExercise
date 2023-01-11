@@ -598,9 +598,23 @@
 // const arr1 = [1, 2, 3];
 // const arr2 = [4, 5, 6];
 // const res = zip(arr1, arr2);
-function MyReplace(S, From, To) {
-    var str = S.split(From);
-    console.log(str);
-    return "";
+// function MyReplace(S: string, From: string, To: string): string {
+//     let str = S.split(From);
+//     console.log(str);
+//     return "";
+// }
+// MyReplace("foobarfoo", "foo", "bar");
+function Fiatten(arr) {
+    var myarr = [];
+    for (var i = 0; i < arr.length; i++) {
+        var element = arr[i];
+        if (Array.isArray(element)) {
+            myarr = myarr.concat(Fiatten(element));
+        }
+        else {
+            myarr.push(element);
+        }
+    }
+    return myarr;
 }
-MyReplace("foobarfoo", "foo", "bar");
+console.log(Fiatten([1, 2, [3, 4], [[[5]]]]));

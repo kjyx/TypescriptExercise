@@ -810,10 +810,27 @@
 // const arr2 = [4, 5, 6];
 
 // const res = zip(arr1, arr2);
-function MyReplace(S: string, From: string, To: string): string {
-    let str = S.split(From);
-    console.log(str);
-    return "";
-}
+// function MyReplace(S: string, From: string, To: string): string {
+//     let str = S.split(From);
+//     console.log(str);
+//     return "";
+// }
 
-MyReplace("foobarfoo", "foo", "bar");
+// MyReplace("foobarfoo", "foo", "bar");
+
+
+
+// function Fiatten(arr: any) {
+//     let myarr: any[] = [];
+//     for (let i = 0; i < arr.length; i++) {
+//         const element = arr[i];
+//         if (Array.isArray(element)) {
+//             myarr = myarr.concat(Fiatten(element));
+//         } else {
+//             myarr.push(element);
+//         }
+//     }
+//     return myarr;
+// }
+
+// console.log(Fiatten([1, 2, [3, 4], [[[5]]]]));
