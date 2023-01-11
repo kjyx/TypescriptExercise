@@ -570,12 +570,37 @@
 //     genter: "ccc",
 //     kind: 'cc'
 // };
-var statusCode = {
-    200: "操作成功",
-    404: "内容找不到",
-    500: "操作失败",
-    10001: "登录失效"
-};
-var status1 = 200;
-var ccc = statusCode[status1];
-console.log(ccc);
+// let statusCode = {
+//     200: "操作成功",
+//     404: "内容找不到",
+//     500: "操作失败",
+//     10001: "登录失效",
+// };
+// type status = keyof typeof statusCode;
+// let status1:status = 200
+// let ccc = statusCode[status1]
+// type MySplit<T extends string, U extends unknown[] = []> = T extends `${infer F}${infer last}` ? MySplit<last, [...U, F]> : U;
+// type str = MySplit<"12345">;
+// type Indexof<T extends any[], U, C extends number[] = []> = T extends [infer F, ...infer Rest] ? (F extends U ? C["length"] : Indexof<Rest, U, [...C, 1]>) : -1;
+// type kkk = Indexof<[1, 2, 3, 4, 5], 4>;
+// type Mutable<Obj> = {
+//     -readonly [Key in keyof Obj]: Obj[Key];
+// };
+// type Zip<T extends any[], U extends any[]> = T extends [infer F, ...infer Rest] ? (U extends [infer uF, ...infer uRest] ? [[F, uF], ...Zip<Rest, uRest>] : []) : [];
+// function zip(target: unknown[], source: unknown[]): unknown[];
+// function zip<Target extends readonly unknown[], Source extends readonly unknown[]>(target: Target, source: Source): Zip<Mutable<Target>, Mutable<Source>>;
+// function zip<Target extends unknown[], Source extends unknown[]>(target: Target, source: Source) {
+//     if (!target.length || !source.length) return [];
+//     let [f, ...targetrest] = target;
+//     let [s, ...sourcerest] = source;
+//     return [[f, s], ...zip(targetrest, sourcerest)];
+// }
+// const arr1 = [1, 2, 3];
+// const arr2 = [4, 5, 6];
+// const res = zip(arr1, arr2);
+function MyReplace(S, From, To) {
+    var str = S.split(From);
+    console.log(str);
+    return "";
+}
+MyReplace("foobarfoo", "foo", "bar");
