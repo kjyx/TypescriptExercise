@@ -25,7 +25,7 @@ type cases = [
   Expect<Equal<MyCapitalize<'r'>, 'R'>>,
   Expect<Equal<MyCapitalize<'s'>, 'S'>>,
   Expect<Equal<MyCapitalize<'t'>, 'T'>>,
-  Expect<Equal<MyCapitalize<'u'>, 'U'>>,
+  Expect<Equal<MyCapitalize<'u'>, 'U'>>, 
   Expect<Equal<MyCapitalize<'v'>, 'V'>>,
   Expect<Equal<MyCapitalize<'w'>, 'W'>>,
   Expect<Equal<MyCapitalize<'x'>, 'X'>>,

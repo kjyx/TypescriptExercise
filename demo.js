@@ -604,17 +604,19 @@
 //     return "";
 // }
 // MyReplace("foobarfoo", "foo", "bar");
-function Fiatten(arr) {
-    var myarr = [];
-    for (var i = 0; i < arr.length; i++) {
-        var element = arr[i];
-        if (Array.isArray(element)) {
-            myarr = myarr.concat(Fiatten(element));
-        }
-        else {
-            myarr.push(element);
-        }
-    }
-    return myarr;
-}
-console.log(Fiatten([1, 2, [3, 4], [[[5]]]]));
+// function Fiatten(arr) {
+//     var myarr = [];
+//     for (var i = 0; i < arr.length; i++) {
+//         var element = arr[i];
+//         if (Array.isArray(element)) {
+//             myarr = myarr.concat(Fiatten(element));
+//         }
+//         else {
+//             myarr.push(element);
+//         }
+//     }
+//     return myarr;
+// }
+// console.log(Fiatten([1, 2, [3, 4], [[[5]]]]));
+
+
