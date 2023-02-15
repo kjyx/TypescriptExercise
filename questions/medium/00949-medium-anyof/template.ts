@@ -1,0 +1,1 @@
+type AnyOf<T extends readonly any[]> = T extends [infer L, ...infer R] ? L extends false | [] | 0 | '' | null | undefined | { [P in any]: never } ? AnyOf<R> : true : false
